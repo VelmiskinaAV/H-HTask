@@ -2,6 +2,8 @@ package ru.arvelm.lesson_1_velmiskina_arina;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -18,6 +20,11 @@ public class SecondActivity extends AppCompatActivity {
     TextView textViewResult;
     HashMap<String, Student> studentList = new HashMap<>();
 
+    public static Intent newIntent(Context context) {
+        Intent intent = new Intent(context, SecondActivity.class);
+        return intent;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +40,7 @@ public class SecondActivity extends AppCompatActivity {
                         String text = editText.getText().toString();
                         String[] textArray = text.trim().split(" ");
 
-                        if (text == "" || textArray.length < 4) {
+                        if (text.equals("") || textArray.length < 4) {
                             throw new Exception("Введите 4 параметра");
                         }
 
@@ -61,9 +68,12 @@ public class SecondActivity extends AppCompatActivity {
         buttonAddData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String allText = "";
+                StringBuilder allText = new StringBuilder();
                 for(String i: studentList.keySet()){
-                    allText += i + " " + studentList.get(i).returnValue() + "\n";
+                    allText.append(i);
+                    allText.append(" ");
+                    allText.append(studentList.get(i). returnValue());
+                    allText.append("\n");
                 }
                 textViewResult.setText(allText);
             }

@@ -2,6 +2,8 @@ package ru.arvelm.lesson_1_velmiskina_arina;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,37 +19,42 @@ public class FirstActivity extends AppCompatActivity {
     public EditText editText;
     public SortedSet<String> listOfStudent = new TreeSet<>();
 
+    public static Intent newIntent(Context context) {
+        Intent intent = new Intent(context, FirstActivity.class);
+        return intent;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
-        textViewResult = (TextView) findViewById(R.id.textViewResult);
-        Button buttonAddData = (Button) findViewById(R.id.buttonAddData);
+        textViewResult = findViewById(R.id.textViewResult);
+        Button buttonAddData =  findViewById(R.id.buttonAddData);
 
         buttonAddData.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                editText = (EditText) findViewById(R.id.editText);
+                editText = findViewById(R.id.editText);
 
-                if (editText.toString() != "") {
+                if (!editText.toString().equals("")) {
                     listOfStudent.add(editText.getText().toString());
                     editText.setText("");
                 }
             }
         });
 
-        Button showData = (Button) findViewById(R.id.buttonShowData);
+        Button showData = findViewById(R.id.buttonShowData);
 
         showData.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                String setText = "";
+                StringBuilder setText = new StringBuilder();
                 for (String i : listOfStudent) {
-                    setText += i;
-                    setText += "\n";
+                    setText.append(i);
+                    setText.append("\n");
                 }
 
                 textViewResult.setText(setText);

@@ -2,6 +2,7 @@ package ru.arvelm.lesson_1_velmiskina_arina;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,23 +17,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonFirstAct = (Button) findViewById(R.id.buttonFirstAct);
+        buttonFirstAct = findViewById(R.id.buttonFirstAct);
+
+
+
+
 
         buttonFirstAct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FirstActivity.class);
-                startActivity(intent);
+                startActivity(FirstActivity.newIntent(MainActivity.this));
+                // startActivity(new Intent(MainActivity.this, FirstActivity.class));
             }
         });
 
-        buttonSecondAct = (Button) findViewById(R.id.buttonSecondAct);
+        buttonSecondAct = findViewById(R.id.buttonSecondAct);
 
         buttonSecondAct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                startActivity(intent);
+                startActivity(SecondActivity.newIntent(MainActivity.this));
+               // Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+               // startActivity(intent);
             }
         });
     }
