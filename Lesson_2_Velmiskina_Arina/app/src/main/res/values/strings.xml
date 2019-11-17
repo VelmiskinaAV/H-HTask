@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lesson_2</string>
+    <string name="button_name_first">Nothing</string>
+    <string name="button_name_second">Rectangles</string>
+    <string name="button_name_third">Image</string>
+    <string name="button_name_version">Pain</string>
+    <string name="text_name_first">Sorry, there is nothing</string>
+</resources>

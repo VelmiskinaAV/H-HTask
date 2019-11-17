@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lesson_2</string>
+    <string name="button_name_first">Пушкин</string>
+    <string name="button_name_second">Квадраты</string>
+    <string name="button_name_third">Картинка</string>
+    <string name="button_name_version">Боль и Страдание</string>
+    <string name="text_name_first">Одна свеча избу лишь слабо освещала; \n
+                                   Зажгли другую, — что ж? изба светлее стала. \n
+                                   Правдивы древнего речения слова: \n
+                                   Ум хорошо, а лучше два.
+    </string>
+</resources>
