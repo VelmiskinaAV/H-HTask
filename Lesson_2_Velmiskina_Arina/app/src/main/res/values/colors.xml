@@ -6,6 +6,6 @@
     <color name="colorRed">#F00</color>
     <color name="colorGreen">#0F0</color>
     <color name="colorWhite">#FFF</color>
-    <color name="colorText">#000</color>
+    <color name="colorText">#F00</color>
 
 </resources>

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 <string name="app_name">Lesson_1_Velmiskina_Arina</string>
-<string name="button_name_first">Пушкин</string>
-<string name="button_name_second">Квадраты</string>
-<string name="button_name_third">Картинка</string>
-<string name="button_name_version">Счастье и радоть</string>
-<string name="text_name_first">Одна свеча избу лишь слабо освещала; \n
-                               Зажгли другую, — что ж? изба светлее стала. \n
-                               Правдивы древнего речения слова: \n
-                               Ум хорошо, а лучше два.
-    </string>
+<string name="button_name_first">Pushkin</string>
+<string name="button_name_second">Rectangles</string>
+<string name="button_name_third">Image</string>
+<string name="button_name_version">Happiness</string>
+<string name="text_name_first">Sorry:(</string>
 </resources>
