@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subTitle"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:paddingStart="16dp"
+                android:paddingBottom="14dp"
+                android:paddingTop="32dp"
+                />
+
+            <TextView
+                style="@style/styleTitle"
+                android:text="@string/name"
+                />
+
+            <TextView
+                style="@style/styleResource"
+                android:id="@+id/name"
+                android:text="@string/name"
+                />
+
+            <TextView
+                style="@style/styleTitle"
+                android:text="@string/surnameTitle"
+                />
+
+            <TextView
+                style="@style/styleResource"
+                android:id="@+id/surname"
+                />
+
+            <TextView
+                style="@style/styleTitle"
+                android:text="@string/emailTitle"
+                />
+
+            <TextView
+                style="@style/styleResource"
+                android:id="@+id/email"
+                />
+
+            <TextView
+                style="@style/styleTitle"
+                android:text="@string/loginTitle"
+                />
+
+            <TextView
+                style="@style/styleResource"
+                android:id="@+id/login"
+                />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/styleTitle"
+                            android:text="@string/regionTitle"
+                            />
+
+                        <TextView
+                            style="@style/styleResource"
+                            android:id="@+id/region"
+                            />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/imageButtonRegion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_create_black"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="34dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonExit"
+                    android:outlineAmbientShadowColor="@color/colorWhite"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exitTitle"
+                    android:textSize="16dp"
+                    android:paddingStart="16dp"
+                    android:textAllCaps="false"
+                    android:paddingTop="29dp"
+                    android:paddingBottom="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="normal"
+                    android:drawableLeft="@drawable/ic_menu_exit"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

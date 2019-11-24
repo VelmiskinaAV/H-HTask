@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lesson_3_Velmiskina_Arina</string>
+    <string name="title">Личные данные</string>
+    <string name="textStyle">Roboto-Regular</string>
+    <string name="subTitle">Личные данные</string>
+    <string name="name">Имя</string>
+    <string name="surnameTitle">Фамилия</string>
+    <string name="emailTitle">E-mail</string>
+    <string name="loginTitle">Логин</string>
+    <string name="regionTitle">Ваш регион</string>
+    <string name="exitTitle">Выйти из аккаунта</string>
+</resources>

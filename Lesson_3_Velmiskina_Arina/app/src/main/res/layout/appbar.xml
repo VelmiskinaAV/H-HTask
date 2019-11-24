@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="120dp"
+        android:maxWidth="120dp"
+        android:src="@color/colorWhite"
+        android:paddingStart="16dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="17dp"
+        android:layout_alignTop="@id/imagePerson"
+        android:layout_alignBottom="@id/imagePerson"
+        />
+
+    <ImageView
+        android:id="@+id/imagePerson"
+        android:src="@mipmap/image_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="32dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="32dp"
+        android:scaleType="fitCenter"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imagePerson"
+        android:textColor="@color/colorTitleText"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:paddingBottom="39dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="33dp"
+        android:text=""
+        />
+
+</RelativeLayout>

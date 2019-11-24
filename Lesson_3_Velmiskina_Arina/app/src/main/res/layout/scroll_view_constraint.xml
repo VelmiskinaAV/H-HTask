@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <TextView
+                android:id="@+id/subTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subTitle"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:paddingStart="16dp"
+                android:paddingBottom="14dp"
+                android:paddingTop="32dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/textTitle1"
+                style="@style/styleTitle"
+                android:text="@string/name"
+                app:layout_constraintTop_toBottomOf="@id/subTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                style="@style/styleResource"
+                android:id="@+id/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textTitle1"
+                />
+
+            <TextView
+                android:id="@+id/textTitle2"
+                style="@style/styleTitle"
+                android:text="@string/surnameTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                />
+
+            <TextView
+                style="@style/styleResource"
+                android:id="@+id/surname"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textTitle2"
+                />
+
+            <TextView
+                android:id="@+id/textTitle3"
+                style="@style/styleTitle"
+                android:text="@string/emailTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/surname"
+                />
+
+            <TextView
+                style="@style/styleResource"
+                android:id="@+id/email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textTitle3"
+                />
+
+            <TextView
+                android:id="@+id/textTitle4"
+                style="@style/styleTitle"
+                android:text="@string/loginTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/email"
+                />
+
+            <TextView
+                style="@style/styleResource"
+                android:id="@+id/login"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textTitle4"
+                />
+
+                        <TextView
+                            android:id="@+id/textTitle5"
+                            style="@style/styleTitle"
+                            android:text="@string/regionTitle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/login"
+                            />
+
+                        <TextView
+                            style="@style/styleResource"
+                            android:id="@+id/region"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/textTitle5"
+                            />
+
+                        <ImageButton
+                            android:id="@+id/imageButtonRegion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_create_black"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            app:layout_constraintRight_toRightOf="@id/textTitle5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/textTitle5"
+                            android:layout_marginEnd="16dp"
+                            />
+
+                <Button
+                    android:id="@+id/buttonExit"
+                    android:outlineAmbientShadowColor="@color/colorWhite"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exitTitle"
+                    android:textSize="16dp"
+                    android:paddingStart="16dp"
+                    android:textAllCaps="false"
+                    android:paddingTop="29dp"
+                    android:paddingBottom="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="normal"
+                    android:drawableLeft="@drawable/ic_menu_exit"
+                    app:layout_constraintTop_toBottomOf="@id/region"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
