@@ -2,9 +2,11 @@ package ru.arvelm.lesson_4;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.provider.SyncStateContract;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -72,22 +74,17 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
-        // use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
         recyclerView.setHasFixedSize(true);
 
-       recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL));
 
-        // use a linear layout manager
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
         List<AddData> myDataset = new ArrayList<AddData>() ;
 
         mRecyclerView = findViewById(R.id.recyclerView);
-        GridLayoutManager mGridLayoutManager = new GridLayoutManager(MainActivity.this, 2);
-        mRecyclerView.setLayoutManager(mGridLayoutManager);
 
         AddData newData = new AddData(1, R.drawable.ic_bill, "Квитанции", "- 40 080,55 \u20BD ", true);
         myDataset.add(newData);
@@ -113,14 +110,27 @@ public class MainActivity extends AppCompatActivity {
         MyAdapter myAdapter = new MyAdapter(MainActivity.this, myDataset);
         mRecyclerView.setAdapter(myAdapter);
 
-       //MyAdapter mAdapter = new MyAdapter(myDataset);
-     /*    myAdapter.setOnTextClickListener(new MyAdapter.OnTextClickListener() {
-            @Override
-            public void onItemClick(String text) {
-                Toast.makeText(MainActivity.this, "Click ", Toast.LENGTH_LONG).show();
-            }
-        });
-        recyclerView.setAdapter(myAdapter);
-*/
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
+
+    public static void onAttachedToRecyclerView(RecyclerView recyclerView, final RecyclerView.Adapter adapter, final int pinnedHeaderType) {
+        final RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
+        if (layoutManager instanceof GridLayoutManager) {
+            final GridLayoutManager gridLayoutManager = (GridLayoutManager) layoutManager;
+            final GridLayoutManager.SpanSizeLookup oldSizeLookup = gridLayoutManager.getSpanSizeLookup();
+            gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+                @Override
+                public int getSpanSize(int position) {
+                    if (adapter.getItemViewType(position) == pinnedHeaderType) {
+                        return gridLayoutManager.getSpanCount();
+                    }
+                    if (oldSizeLookup != null) {
+                        return oldSizeLookup.getSpanSize(position);
+                    }
+                    return 1;
+                }
+            });
+        }
+    }
+
 }

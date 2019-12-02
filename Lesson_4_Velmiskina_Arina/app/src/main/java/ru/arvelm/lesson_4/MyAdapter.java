@@ -2,9 +2,11 @@ package ru.arvelm.lesson_4;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -50,10 +52,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolderTypeOne>
         holder.mTitle.setText(listOfData.get(position).getTitle());
 
         if (listOfData.get(position).getRedTextFlag()){
-            holder.subTitle.setTextColor(R.color.red);
+            holder.subTitle.setTextColor(mContext.getResources().getColor(R.color.red));
             holder.subTitle.setText(listOfData.get(position).getInfo());
         } else {
-            holder.subTitle.setTextColor(R.color.colorPrimaryDark);
+            holder.subTitle.setTextColor(mContext.getResources().getColor(R.color.warmGray));
             holder.subTitle.setText(listOfData.get(position).getInfo());
         }
     }

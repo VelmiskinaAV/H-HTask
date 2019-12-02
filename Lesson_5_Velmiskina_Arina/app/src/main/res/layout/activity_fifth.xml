@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".FifthActivity">
+    <Button
+        android:id="@+id/buttonDeliverResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="deliver result"
+        android:paddingBottom="100dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/editTextDeliver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:text="123123"/>
+
+    <EditText
+        android:id="@+id/editTextClassData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:imeOptions="actionDone"/>
+
+    <TextView
+        android:id="@+id/textViewClassData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:paddingBottom="100dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:textAlignment="center"/>
+</LinearLayout>
