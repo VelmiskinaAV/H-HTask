@@ -27,8 +27,6 @@ import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-    String[] text = {"1", "2"};
-    int[] images= {R.drawable.ic_mood_black, R.drawable.ic_sentiment_dissatisfied};
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_activity_main, menu);
@@ -38,11 +36,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch(item.getItemId()){
-            case R.id.smile:
-                Toast.makeText(this, "Smile", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.sad:
-                Toast.makeText(this, "Sad", Toast.LENGTH_SHORT).show();
+            case R.id.search:
+                Toast.makeText(this, "Search", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.action1:
                 Toast.makeText(this, "123", Toast.LENGTH_SHORT).show();
@@ -64,47 +59,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
-        toolbar.setNavigationOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(MainActivity.this, "Back", Toast.LENGTH_SHORT).show();
-                    }
-                }
-        );
 
         final BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
         loadFragment(new FragmentTypeOne());
-
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.viewPage);
-        if (viewPager != null) {
-            viewPager.setAdapter(new SimplePagerAdapter(this));
-        }
-
-        Button buttonShow = findViewById(R.id.buttonShow);
-        buttonShow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                bottomNavigationView.getMenu().removeItem(R.id.action_mail);
-                viewPager.getResources().getDrawable(R.drawable.ic_arrow_back);
-                viewPager.getResources().getText(1, "text");
-                bottomNavigationView.getMenu().add(viewPager.toString());
-            }
-        });
-
-        Button buttonHide = findViewById(R.id.buttonHide);
-        buttonHide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                    bottomNavigationView.getMenu().removeItem(R.id.viewPage);
-
-
-            }
-        });
-
     }
 
     private boolean loadFragment(Fragment fragment){
@@ -119,25 +78,19 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         Fragment fragment = null;
         switch (menuItem.getItemId()){
-            case R.id.action_map:
+            case R.id.action_type_one:
                 fragment = new FragmentTypeOne();
                 menuItem.setChecked(true);
                 break;
-            case R.id.action_dial:
+            case R.id.action_type_two:
                 fragment = new FragmentTypeTwo();
                 menuItem.setChecked(true);
                 break;
-            case R.id.action_mail:
+            case R.id.action_type_three:
                 fragment = new FragmentTypeThree();
                 menuItem.setChecked(true);
                 break;
-            case R.id.viewPage:
-                fragment = new FragmentForViewPager();
-                menuItem.setChecked(true);
         }
         return loadFragment(fragment);
     }
-
-
-
 }

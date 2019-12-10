@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Lesson_6</string>
+    <string name="subtitle">Новые показания</string>
+    <string name="subtitle1">День</string>
+    <string name="subtitle2">Ночь</string>
+    <string name="subtitle3">Пик</string>
 </resources>

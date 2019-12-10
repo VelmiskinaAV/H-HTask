@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="15dp"
+    app:cardCornerRadius="4dp">
+
+      <LinearLayout
+          app:layout_constraintTop_toTopOf="parent"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <ImageButton
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginEnd="20dp"
+                  android:padding="2dp"
+                  android:id="@+id/buttonInfo"
+                  android:src="@drawable/ic_info"
+                  android:background="?attr/selectableItemBackgroundBorderless"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintEnd_toStartOf="@id/buttonMore"/>
+
+              <ImageButton
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/buttonMore"
+                  android:src="@drawable/ic_more"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginEnd="16dp"
+                  android:background="?attr/selectableItemBackgroundBorderless"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"/>
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+
+             <ImageView
+                 android:layout_marginStart="20dp"
+                 android:id="@+id/imageView"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:maxHeight="35dp"
+                 android:maxWidth="28dp"/>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical">
+
+                 <TextView
+
+                     android:layout_marginStart="16dp"
+                     android:id="@+id/textViewTitle"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textStyle="bold"
+                     android:textColor="@color/colorCharcoalGray"
+                     android:textSize="16sp"
+                     android:paddingStart="16dp"/>
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal">
+
+                     <ImageView
+                         android:layout_marginStart="32dp"
+                         android:layout_marginTop="8dp"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/ic_serial_number"
+                         android:maxHeight="7dp"
+                         android:maxWidth="14dp"/>
+
+                     <TextView
+                         android:layout_marginStart="4dp"
+                         android:layout_marginTop="2dp"
+                         android:id="@+id/textViewIdClient"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:textColor="@color/colorCharcoalGray"
+                         android:textSize="14sp"/>
+
+                 </LinearLayout>
+
+             </LinearLayout>
+
+         </LinearLayout>
+
+          <TextView
+              android:id="@+id/textViewText"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/subtitle"
+              android:textColor="@color/colorWarmGray"
+              android:textSize="12sp"
+              android:paddingTop="28dp"
+              android:paddingStart="16dp"/>
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_height="wrap_content"
+              android:layout_width="match_parent">
+
+              <EditText
+                  app:layout_constraintTop_toTopOf="parent"
+                  android:id="@+id/editTextData"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="35"
+                  android:paddingStart="16dp"
+                  android:paddingEnd="16dp"
+                  android:layout_marginEnd="60dp"
+                  android:textColor="@color/colorWarmGray"
+                  android:textSize="14sp"/>
+
+              <ImageButton
+                  android:id="@+id/buttonSend"
+                  android:padding="8dp"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="16dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:foreground="?android:attr/selectableItemBackground"
+                  android:background="@color/colorButton"
+                  android:src="@drawable/ic_send"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toEndOf="@id/editTextData"
+                  app:layout_constraintCircleRadius="2dp"
+                  />
+
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              android:layout_marginBottom="20dp">
+
+              <ImageView
+                  app:layout_constraintStart_toStartOf="parent"
+                  android:layout_marginTop="5dp"
+                  app:layout_constraintTop_toTopOf="parent"
+                  android:id="@+id/imageState"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                 />
+
+              <TextView
+                  app:layout_constraintStart_toEndOf="@id/imageState"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  android:layout_marginEnd="16dp"
+                  android:id="@+id/textViewMessage"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  />
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+      </LinearLayout>
+
+</androidx.cardview.widget.CardView>

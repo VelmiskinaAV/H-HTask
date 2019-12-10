@@ -1,26 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
-    <ImageView
-        android:id="@+id/imageFragment3"
+    <Button
+        android:layout_marginTop="150dp"
+        android:paddingStart="78dp"
+        android:paddingEnd="78dp"
+        android:id="@+id/buttonShow"
         app:layout_constraintTop_toTopOf="parent"
-        android:paddingTop="150dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat = "@android:drawable/ic_dialog_email"/>
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimary"
+        android:text="Показать баннер"
+        android:textColor="@color/colorWhite"
+        />
 
-    <TextView
-        app:layout_constraintTop_toBottomOf="@id/imageFragment3"
+    <Button
+        android:layout_marginTop="150dp"
+        android:paddingStart="78dp"
+        android:paddingEnd="78dp"
+        android:id="@+id/buttonHide"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Type 3"/>
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimary"
+        android:text="Скрыть баннер"
+        android:textColor="@color/colorWhite"
+
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        app:layout_constraintTop_toBottomOf="@id/buttonShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

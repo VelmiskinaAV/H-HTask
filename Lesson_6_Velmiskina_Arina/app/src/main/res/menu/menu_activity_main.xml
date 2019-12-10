@@ -3,17 +3,10 @@
     xmlns:yourapp="http://schemas.android.com/apk/res-auto"
     >
     <item
-        android:id="@+id/sad"
-        android:icon="@drawable/ic_sentiment_dissatisfied"
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search"
         yourapp:showAsAction="always"
         android:title="Записать"/>
-
-    <item
-        android:id="@+id/smile"
-        android:icon="@drawable/ic_mood_black"
-        yourapp:showAsAction="always"
-        android:title="Записать">
-    </item>
 
     <item
         android:id="@+id/action1"

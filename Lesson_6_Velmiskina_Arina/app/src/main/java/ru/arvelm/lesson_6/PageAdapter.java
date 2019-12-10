@@ -2,15 +2,12 @@ package ru.arvelm.lesson_6;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-
-import java.lang.reflect.Array;
 
 public class PageAdapter extends FragmentPagerAdapter {
 
